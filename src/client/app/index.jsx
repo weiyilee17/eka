@@ -1,10 +1,21 @@
 import React from 'react';
-import {render} from 'react-dom';
+import ReactDOM from 'react-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-class App extends React.Component {
-  render() {
-    return <p> Hello React </p>;
-  }
-}
+import App from "./component/App.jsx";
+import Form1 from "./component/Form1.jsx";
+import Form2 from "./component/Form2.jsx";
+import Form3 from "./component/Form3.jsx";
 
-render(<App/>, document.getElementById('app'));
+
+
+ReactDOM.render(
+  <BrowserRouter>
+    <Switch>
+      <Route exact path="/" render={ () => (<App />)} />
+      <Route exact path="/Forms/1" render={ () => (<Form1 />)} />
+      <Route exact path="/Forms/2" render={ () => (<Form2 />)} />
+      <Route exact path="/Forms/3" render={ () => (<Form3 />)} />
+    </Switch>
+  </BrowserRouter>
+  , document.getElementById('app'));

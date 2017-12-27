@@ -139,7 +139,7 @@ class Form2 extends React.Component {
 
       </form>
 
-      <Link to = {`/Forms/3/${this.state.username}`}>Back</Link>
+      <Link to = {`/`}>Back</Link>
       <br />
 
       {/* if the information is valid, the link will apear. Otherwise, it would only show an empty div tag */}

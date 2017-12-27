@@ -33,7 +33,7 @@ let addInfoFromForm2 = (sentObj, callback) => {
 let addInfoFromForm3 = (sentObj, callback) => {
 
   connection.query(`UPDATE users SET address = '${sentObj.address}', 
-  city = '${sentObj.city}', state = '${sentObj.state}', zip = '${sentObj.zip}' 
+  city = '${sentObj.city}', state = '${sentObj.state}', zipcode = '${sentObj.zip}' 
   WHERE username = '${sentObj.username}'`, (err, results) => {
 
     if (err) {
@@ -46,5 +46,5 @@ let addInfoFromForm3 = (sentObj, callback) => {
 
 
 module.exports = {
-  addInfoFromForm1, addInfoFromForm2, addInfoFromForm2
+  addInfoFromForm1, addInfoFromForm2, addInfoFromForm3
 }

@@ -146,6 +146,12 @@ class Form3 extends React.Component {
         </label>
         <br />
 
+        <label>
+          zip: <input type='text' name='zip'
+                    value={this.state.zip} placeholder='Enter your zip' onChange={this.textChange}></input>
+        </label>
+        <br />
+
 
         {/* I didn't know how to combine react router's link with the button, so I had the button check integrity. The link to the next form will only appear if all inputs are good */}
         <input type='submit' value='Check for integrity!' onClick={this.saveData}></input>

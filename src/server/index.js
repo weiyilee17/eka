@@ -43,7 +43,33 @@ app.post('/form/1', (req, res) => {
     })
     */
 
-})
+});
+
+app.post('/form/2', (req, res) => {
+  console.log('req.body for post form 2: ', req.body);
+
+  db.addInfoFromForm2(req.body, (err, data) => {
+    if (err) {
+      res.status(500).send(err);
+    } else {
+      res.status(200).send(data);
+    }
+  });
+
+});
+
+app.post('/form/3', (req, res) => {
+  console.log('req.body for post form 3: ', req.body);
+
+  db.addInfoFromForm3(req.body, (err, data) => {
+    if (err) {
+      res.status(500).send(err);
+    } else {
+      res.status(200).send(data);
+    }
+  });
+
+});
 
 
 app.listen(port, () => {

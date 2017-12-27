@@ -136,8 +136,7 @@ class Form1 extends React.Component {
       <br />
 
       {/* if the information is valid, the link will apear. Otherwise, it would only show an empty div tag */}
-      {this.state.informationValid === true ? <Link to = {`/Forms/2/${this.state.username}`}>Save</Link> 
-                                            : <div></div>}
+      {this.state.informationValid === true ? <Link to = {`/Forms/2/${this.state.username}`}>Save</Link> : <div></div>}
 
     </div>);
   }

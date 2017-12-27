@@ -6,30 +6,16 @@ import Form3 from "./Form3.jsx";
 import { Link } from 'react-router-dom';
 
 
+// Didn't make it stateless in case we want to makes changes in the future
 class App extends React.Component {
-
-  constructor(props) {
-    super(props);
-    this.state = {
-
-    }
-    this.textChange = this.textChange.bind(this);
-  }
-
-  textChange(e) {
-    this.setState({
-      [e.target.name]: e.target.value
-    });
-  }
-
-
 
   render() {
   return (
     <div>
-      <p>Fill these forms~</p>
+      <h1>EKA Solutions</h1>
+      <p>Register as an user to join us~</p>
 
-      <Link to = {'/Forms/1'}>First Link</Link>
+      <Link to = {'/Forms/1'}>Register!</Link>
 
 
     </div>);

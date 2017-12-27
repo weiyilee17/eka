@@ -8,14 +8,13 @@ import Form2 from "./component/Form2.jsx";
 import Form3 from "./component/Form3.jsx";
 
 
-
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
       <Route exact path="/" render={ () => (<App />)} />
       <Route exact path="/Forms/1" render={ () => (<Form1 />)} />
-      <Route exact path="/Forms/2" render={ () => (<Form2 />)} />
-      <Route exact path="/Forms/3" render={ () => (<Form3 />)} />
+      <Route exact path="/Forms/2/:username" render={ () => (<Form2 />)} />
+      <Route exact path="/Forms/3/:username" render={ () => (<Form3 />)} />
     </Switch>
   </BrowserRouter>
   , document.getElementById('app'));
